@@ -14,7 +14,7 @@ def FL_Averaging(data_path: str, path_model: str , doc_id: str):
     """Federated Learning Averaging Pipeline"""
 
     output_path = "./global_model/updated_global_model.pth"
-    global_model_path = r"C:\Users\Amin\Desktop\federated server\brain_tumor_cnn.pth"
+    global_model_path = r"\brain_tumor_cnn.pth"
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
