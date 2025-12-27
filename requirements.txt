@@ -1,0 +1,10 @@
+torch
+torchvision
+zenml["server"]
+fastapi
+uvicorn
+pymongo        
+requests
+matplotlib
+scikit-learn
+Pillow
