@@ -1,6 +1,5 @@
 torch
 torchvision
-zenml
 fastapi
 uvicorn
 pymongo        
