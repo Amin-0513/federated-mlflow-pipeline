@@ -1,6 +1,6 @@
 torch
 torchvision
-zenml["server"]
+zenml
 fastapi
 uvicorn
 pymongo        
