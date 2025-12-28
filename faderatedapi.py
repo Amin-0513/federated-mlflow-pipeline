@@ -21,6 +21,11 @@ def doc_helper(doc):
         "status": doc.get("status"),
     }
 
+@app.get("/")
+def root():
+    return {
+        "message": "Federated learning PIPLINE API"
+    }
 # Endpoint to get document by ID
 @app.get("/documents/{doc_id}")
 async def get_document(doc_id: str):
