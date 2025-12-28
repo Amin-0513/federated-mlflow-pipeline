@@ -8,7 +8,9 @@ class DataIngestion:
     def get_data(self):
         # Simulate data ingestion logic
         logging.info(f"Ingesting data from {self.data_path}")
-        return self.data_path
+        data="./brain-tumor-mri-dataset"
+        
+        return data
     
 
 @step
