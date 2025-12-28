@@ -11,7 +11,7 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, class
 import numpy as np  
 from zenml import step
 
-@step
+@step(enable_cache=False)
 def data_augmentation_step(
     data_dir: str,
     batch_size: int = 16,
