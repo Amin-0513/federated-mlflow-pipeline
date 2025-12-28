@@ -6,7 +6,7 @@ import os
 from zenml import step, pipeline
 from zenml.types import HTMLString
 
-@step(enable_artifact_visualization=True)
+@step(enable_artifact_visualization=True,enable_cache=False)
 def visualize(datatype:str) -> HTMLString:
     """Creates a matplotlib plot and returns it as embedded HTML."""
     class_counts = {}
