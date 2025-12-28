@@ -11,13 +11,13 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, class
 import numpy as np  
 from zenml import step
 
-@step(enable_cache=False)
+@step
 def data_augmentation_step(
     data_dir: str,
     batch_size: int = 16,
 ) -> Tuple[DataLoader, DataLoader, List[str]]:
     """Loads data, applies transforms, and returns dataloaders."""
-
+    data="./brain-tumor-mri-dataset"
     # Training transforms (augmentation)
     train_transform = transforms.Compose([
         transforms.Resize((150, 150)),
@@ -37,8 +37,8 @@ def data_augmentation_step(
     ])
 
     # Datasets
-    train_data = datasets.ImageFolder(data_dir, transform=train_transform)
-    test_data = datasets.ImageFolder(data_dir, transform=test_transform)
+    train_data = datasets.ImageFolder(data, transform=train_transform)
+    test_data = datasets.ImageFolder(data, transform=test_transform)
 
     # Dataloaders
     train_loader = DataLoader(train_data, batch_size=batch_size, shuffle=True)
