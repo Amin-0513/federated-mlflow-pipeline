@@ -58,7 +58,7 @@ class BrainTumorCNN(nn.Module):
 
 
 # ------------------ EVALUATION STEP ------------------
-@step
+@step(enable_cache=False)
 def evaluate_model_step(
     model_path: str,
     test_loader: DataLoader,
