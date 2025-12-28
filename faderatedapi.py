@@ -24,7 +24,7 @@ def doc_helper(doc):
 # Endpoint to get document by ID
 @app.get("/documents/{doc_id}")
 async def get_document(doc_id: str):
-    data_path = "./brain_tumor_dataset/"
+    data_path = "./brain_tumor_dataset"
     
     # Validate ObjectId
     try:
